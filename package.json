@@ -1,0 +1,77 @@
+{
+  "_from": "angular-directive-boilerplate@0.0.*",
+  "_id": "angular-directive-boilerplate@0.0.8",
+  "_inBundle": false,
+  "_integrity": "sha1-wUA4EjmFgt/O1lUoieB4ieXM7BY=",
+  "_location": "/generator-angular-directive/angular-directive-boilerplate",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "angular-directive-boilerplate@0.0.*",
+    "name": "angular-directive-boilerplate",
+    "escapedName": "angular-directive-boilerplate",
+    "rawSpec": "0.0.*",
+    "saveSpec": null,
+    "fetchSpec": "0.0.*"
+  },
+  "_requiredBy": [
+    "/generator-angular-directive"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-directive-boilerplate/-/angular-directive-boilerplate-0.0.8.tgz",
+  "_shasum": "c1403812398582dfced6552889e07889e5ccec16",
+  "_spec": "angular-directive-boilerplate@0.0.*",
+  "_where": "/Users/fvoron/.nvm/versions/node/v4.3.2/lib/node_modules/generator-angular-directive",
+  "author": {
+    "name": "François Voron"
+  },
+  "bugs": {
+    "url": "https://github.com/mohsen1/angular-directive-boilerplate/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Angular Publishable Directive Boilerplate",
+  "devDependencies": {
+    "del": "^0.1.3",
+    "event-stream": "^3.1.7",
+    "gulp": "^3.8.8",
+    "gulp-angular-templatecache": "^1.4.2",
+    "gulp-concat": "^2.4.1",
+    "gulp-connect": "^2.0.6",
+    "gulp-header": "^1.1.1",
+    "gulp-jshint": "^1.8.5",
+    "gulp-karma": "0.0.4",
+    "gulp-less": "^1.3.6",
+    "gulp-minify-css": "^0.3.10",
+    "gulp-minify-html": "^0.1.5",
+    "gulp-open": "^0.3.0",
+    "gulp-order": "^1.1.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "mversion": "^1.6.0"
+  },
+  "homepage": "https://github.com/mohsen1/angular-directive-boilerplate#readme",
+  "keywords": [
+    "angularjs",
+    "angular",
+    "directive"
+  ],
+  "license": "MIT",
+  "main": "dist/ng-really.js",
+  "name": "angular-directive-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mohsen1/angular-directive-boilerplate.git"
+  },
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js test"
+  },
+  "version": "0.0.8"
+}
