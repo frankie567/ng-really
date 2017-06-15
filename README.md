@@ -1,5 +1,7 @@
 # ng-really
 
+[![Build Status](https://travis-ci.org/frankie567/ng-really.svg?branch=master)](https://travis-ci.org/frankie567/ng-really)
+
 Modals and alerts are annoying. Opt for a simpler, more discreet and yet just as safe system: action button that morphs into a confirmation button.
 
 ## Installation
