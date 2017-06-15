@@ -4,6 +4,8 @@
 
 Modals and alerts are annoying. Opt for a simpler, more discreet and yet just as safe system: action button that morphs into a confirmation button.
 
+## [Demo](https://frankie567.github.io/ng-really/demo/demo.html)
+
 ## Installation
 
 Install via bower
