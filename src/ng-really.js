@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngReally', []).directive('ngReally', function ($parse, $timeout) {
+angular.module('ngReally', []).directive('ngReally', ['$parse', '$timeout', function ($parse, $timeout) {
   return {
     restrict: 'A',
     scope: {
@@ -37,4 +37,4 @@ angular.module('ngReally', []).directive('ngReally', function ($parse, $timeout)
       });
     }
   };
-});
+}]);
