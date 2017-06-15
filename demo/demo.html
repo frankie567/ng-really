@@ -2,25 +2,40 @@
 <html ng-app="demo">
   <head>
     <meta charset="utf-8">
-    <title>AngularJS directive demo</title>
+    <title>ng-really Demo</title>
 
     <!-- TODO: Include Angular from Bower components -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
 
     <link rel="stylesheet" href="demo.css">
   </head>
   <body ng-controller="DemoController">
     <div class="container">
-      <h1 class="text-muted">Demo</h1>
+      <h1 class="text-muted">ng-really</h1>
+
+      <p class="lead">Modals and alerts are annoying. Opt for a simpler, more discreet and yet just as safe system: action button that morphs into a confirmation button.</p>
 
       <div class="usage row">
-        <h4>Simple usage</h4>
-        <p>This is a simple usage of frankie567.ng-really</p>
-        <pre>&lt;ng-really&gt;&lt;/ng-really&gt;</pre>
+        <h2>Simple usage</h4>
+        <pre>&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; ng-really ng-really-confirm-label=&quot;'Really?'&quot; ng-really-confirmed-action=&quot;confirmedAction()&quot;&gt;Delete&lt;/button&gt;</pre>
         <h4>Results</h4>
-        <button type="button" class="btn btn-danger" ng-really ng-really-confirm-label="'Really?'" ng-really-confirmed-action="confirmedAction()" ng-really-timeout="5000">Delete</button>
+        <button type="button" class="btn btn-danger" ng-really ng-really-confirm-label="'Really?'" ng-really-confirmed-action="confirmedAction()">Delete</button>
+
+        <hr>
+
+        <h2>With a timeout</h4>
+        <pre>&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; ng-really ng-really-confirm-label=&quot;'Really?'&quot; ng-really-confirmed-action=&quot;confirmedAction()&quot; ng-really-timeout=&quot;1000&quot;&gt;Delete&lt;/button&gt;</pre>
+        <h4>Results</h4>
+        <button type="button" class="btn btn-danger" ng-really ng-really-confirm-label="'Really?'" ng-really-confirmed-action="confirmedAction()" ng-really-timeout="1000">Delete</button>
+
+        <hr>
+
+        <h2>With icons</h4>
+        <pre>&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; ng-really ng-really-confirm-label=&quot;'&lt;span class=\'glyphicon glyphicon-question-sign\'&gt;&lt;/span&gt;'&quot; ng-really-confirmed-action=&quot;confirmedAction()&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-trash pointer&quot;&gt;&lt;/span&gt;&lt;/button&gt;</pre>
+        <h4>Results</h4>
+        <button type="button" class="btn btn-danger" ng-really ng-really-confirm-label="'<span class=\'glyphicon glyphicon-question-sign\'></span>'" ng-really-confirmed-action="confirmedAction()"><span class="glyphicon glyphicon-trash pointer"></span></button>
       </div>
     </div>
 
