@@ -8,10 +8,16 @@ Modals and alerts are annoying. Opt for a simpler, more discreet and yet just as
 
 ## Installation
 
-Install via bower
+Install via bower:
 
 ```shell
 bower install ng-really
+```
+
+And include the script in your HTML:
+
+```html
+<script src="../bower_components/ng-really/dist/ng-really.min.js"></script>
 ```
 
 ## Usage
