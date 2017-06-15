@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('frankie567.ng-really', []).directive('ngReally', function ($parse, $timeout) {
+angular.module('ng-really', []).directive('ngReally', function ($parse, $timeout) {
   return {
     restrict: 'A',
     scope: {

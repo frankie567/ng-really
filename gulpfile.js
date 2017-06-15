@@ -57,7 +57,7 @@ gulp.task('scripts', function() {
              spare: true,
              quotes: true
             }))
-      .pipe(templateCache({module: 'frankie567.ng-really'}));
+      .pipe(templateCache({module: 'ng-really'}));
   }
 
   function buildDistJS(){
