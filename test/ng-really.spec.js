@@ -28,8 +28,8 @@ describe('ng-really', function () {
     if (element) element.remove();
   });
 
-  var template = '<button type="button" ng-really ng-really-confirm-label="\'Really?\'" ng-really-confirmed-action="confirmedAction()">Delete</button>';
-  var templateWithTimeout = '<button type="button" ng-really ng-really-confirm-label="\'Really?\'" ng-really-confirmed-action="confirmedAction()" ng-really-timeout="500">Delete</button>';
+  var template = '<button type="button" ng-really ng-really-confirm-label="Really?" ng-really-confirmed-action="confirmedAction()">Delete</button>';
+  var templateWithTimeout = '<button type="button" ng-really ng-really-confirm-label="Really?" ng-really-confirmed-action="confirmedAction()" ng-really-timeout="500">Delete</button>';
 
   describe('when created', function () {
     it('should display default label', function () {
@@ -43,7 +43,6 @@ describe('ng-really', function () {
     it('should display confirm label', function () {
       element = createDirective(template);
       element.triggerHandler('click');
-      scope.$digest();
 
       expect(element.text()).toEqual('Really?');
     });
@@ -51,7 +50,6 @@ describe('ng-really', function () {
     it('should not execute confirmedAction', function () {
       element = createDirective(template);
       element.triggerHandler('click');
-      scope.$digest();
 
       expect(scope.confirmedAction).not.toHaveBeenCalled();
     });
@@ -59,7 +57,6 @@ describe('ng-really', function () {
     it('should go back to inital state after timeout', function () {
       element = createDirective(templateWithTimeout);
       element.triggerHandler('click');
-      scope.$digest();
 
       $timeout.flush();
       expect(element.text()).toEqual('Delete');
@@ -71,7 +68,6 @@ describe('ng-really', function () {
       element = createDirective(template);
       element.triggerHandler('click');
       element.triggerHandler('click');
-      scope.$digest();
 
       expect(scope.confirmedAction).toHaveBeenCalled();
     });
@@ -80,7 +76,6 @@ describe('ng-really', function () {
       element = createDirective(template);
       element.triggerHandler('click');
       element.triggerHandler('click');
-      scope.$digest();
 
       expect(element.text()).toEqual('Delete');
     });

@@ -4,7 +4,7 @@ angular.module('ngReally', []).directive('ngReally', function ($parse, $timeout)
   return {
     restrict: 'A',
     scope: {
-      confirmLabel: '=ngReallyConfirmLabel',
+      confirmLabel: '@ngReallyConfirmLabel',
       confirmedAction: '&ngReallyConfirmedAction',
       timeout: '=ngReallyTimeout'
     },
@@ -19,19 +19,21 @@ angular.module('ngReally', []).directive('ngReally', function ($parse, $timeout)
       }
 
       element.bind('click', function() {
-        if (clickedOnce) {
-          actionHandler();
-          resetConfirmation();
-        }
-        else {
-          clickedOnce = true;
-          element.html(scope.confirmLabel);
-          if (scope.timeout) {
-            $timeout(function() {
-              resetConfirmation();
-            }, scope.timeout);
+        scope.$apply(function() {
+          if (clickedOnce) {
+            actionHandler();
+            resetConfirmation();
           }
-        }
+          else {
+            clickedOnce = true;
+            element.html(scope.confirmLabel);
+            if (scope.timeout) {
+              $timeout(function() {
+                resetConfirmation();
+              }, scope.timeout);
+            }
+          }
+        });
       });
     }
   };

@@ -1,7 +1,7 @@
 /*!
  * ng-really
  * https://github.com/frankie567/ng-really
- * Version: 0.0.1 - 2017-06-15T14:08:28.600Z
+ * Version: 0.0.1 - 2017-06-15T14:27:47.369Z
  * License: MIT
  */
 
@@ -12,7 +12,7 @@ angular.module('ngReally', []).directive('ngReally', function ($parse, $timeout)
   return {
     restrict: 'A',
     scope: {
-      confirmLabel: '=ngReallyConfirmLabel',
+      confirmLabel: '@ngReallyConfirmLabel',
       confirmedAction: '&ngReallyConfirmedAction',
       timeout: '=ngReallyTimeout'
     },
@@ -27,19 +27,21 @@ angular.module('ngReally', []).directive('ngReally', function ($parse, $timeout)
       }
 
       element.bind('click', function() {
-        if (clickedOnce) {
-          actionHandler();
-          resetConfirmation();
-        }
-        else {
-          clickedOnce = true;
-          element.html(scope.confirmLabel);
-          if (scope.timeout) {
-            $timeout(function() {
-              resetConfirmation();
-            }, scope.timeout);
+        scope.$apply(function() {
+          if (clickedOnce) {
+            actionHandler();
+            resetConfirmation();
           }
-        }
+          else {
+            clickedOnce = true;
+            element.html(scope.confirmLabel);
+            if (scope.timeout) {
+              $timeout(function() {
+                resetConfirmation();
+              }, scope.timeout);
+            }
+          }
+        });
       });
     }
   };
