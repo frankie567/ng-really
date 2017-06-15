@@ -20,7 +20,7 @@ Add `ng-really` as a dependency to your app:
 
 ```javascript
 angular.module('yourApp',[
-  'ng-really'
+  'ngReally'
 ]);
 ```
 

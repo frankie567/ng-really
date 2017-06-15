@@ -14,7 +14,7 @@ describe('ng-really', function () {
     return elm;
   }
 
-  beforeEach(module('ngSanitize', 'ng-really'));
+  beforeEach(module('ngSanitize', 'ngReally'));
   beforeEach(inject(function(_$rootScope_, _$compile_, _$timeout_) {
     $rootScope = _$rootScope_;
     scope = $rootScope.$new();

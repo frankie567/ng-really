@@ -1,4 +1,4 @@
-var app = angular.module('demo', ['ngSanitize', 'ng-really']);
+var app = angular.module('demo', ['ngSanitize', 'ngReally']);
 
 app.controller('DemoController', ['$scope', function($scope) {
     $scope.confirmedAction = function() {

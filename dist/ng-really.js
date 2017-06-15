@@ -1,14 +1,14 @@
 /*!
  * ng-really
  * https://github.com/frankie567/ng-really
- * Version: 0.0.1 - 2017-06-15T13:40:04.016Z
+ * Version: 0.0.1 - 2017-06-15T14:08:28.600Z
  * License: MIT
  */
 
 
 'use strict';
 
-angular.module('ng-really', []).directive('ngReally', function ($parse, $timeout) {
+angular.module('ngReally', []).directive('ngReally', function ($parse, $timeout) {
   return {
     restrict: 'A',
     scope: {
