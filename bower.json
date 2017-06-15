@@ -4,7 +4,7 @@
   "authors": [
     "François Voron <francois.voron@nereo.fr>"
   ],
-  "description": "",
+  "description": "Buttons that require a second click to confirm sensitive action. Bye bye modals and alerts!",
   "main": "dist/ng-really.js, dist/ng-really.js",
   "license": "MIT",
   "private": false,
