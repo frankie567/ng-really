@@ -83,7 +83,7 @@ gulp.task('scripts', function() {
       timestamp: (new Date()).toISOString(), pkg: config.pkg
     }))
     .pipe(gulp.dest('dist'))
-    .pipe(rename({suffix: '.min.js'}))
+    .pipe(rename({suffix: '.min'}))
     .pipe(uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
