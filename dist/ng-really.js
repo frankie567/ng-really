@@ -1,7 +1,7 @@
 /*!
  * ng-really
  * https://github.com/frankie567/ng-really
- * Version: 0.0.3 - 2017-06-15T14:36:08.952Z
+ * Version: 0.0.4 - 2017-06-15T15:08:01.959Z
  * License: MIT
  */
 
@@ -17,7 +17,7 @@ angular.module('ngReally', []).directive('ngReally', ['$parse', '$timeout', func
       timeout: '=ngReallyTimeout'
     },
     link: function (scope, element) {
-      var defaultLabel = element.html();
+      var defaultLabel = null;
       var clickedOnce = false;
       var actionHandler = $parse(scope.confirmedAction);
 
@@ -33,6 +33,7 @@ angular.module('ngReally', []).directive('ngReally', ['$parse', '$timeout', func
             resetConfirmation();
           }
           else {
+            defaultLabel = element.html();
             clickedOnce = true;
             element.html(scope.confirmLabel);
             if (scope.timeout) {

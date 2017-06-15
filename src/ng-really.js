@@ -9,7 +9,7 @@ angular.module('ngReally', []).directive('ngReally', ['$parse', '$timeout', func
       timeout: '=ngReallyTimeout'
     },
     link: function (scope, element) {
-      var defaultLabel = element.html();
+      var defaultLabel = null;
       var clickedOnce = false;
       var actionHandler = $parse(scope.confirmedAction);
 
@@ -25,6 +25,7 @@ angular.module('ngReally', []).directive('ngReally', ['$parse', '$timeout', func
             resetConfirmation();
           }
           else {
+            defaultLabel = element.html();
             clickedOnce = true;
             element.html(scope.confirmLabel);
             if (scope.timeout) {

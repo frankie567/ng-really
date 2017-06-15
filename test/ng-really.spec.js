@@ -30,12 +30,19 @@ describe('ng-really', function () {
 
   var template = '<button type="button" ng-really ng-really-confirm-label="Really?" ng-really-confirmed-action="confirmedAction()">Delete</button>';
   var templateWithTimeout = '<button type="button" ng-really ng-really-confirm-label="Really?" ng-really-confirmed-action="confirmedAction()" ng-really-timeout="500">Delete</button>';
+  var templateWithExpressionAsDefaultLabel = '<button type="button" ng-really ng-really-confirm-label="Really?" ng-really-confirmed-action="confirmedAction()">{{ 1 + 2 }}</button>';
 
   describe('when created', function () {
     it('should display default label', function () {
       element = createDirective(template);
 
       expect(element.text()).toEqual('Delete');
+    });
+
+    it('should display compiled expression default label', function () {
+      element = createDirective(templateWithExpressionAsDefaultLabel);
+
+      expect(element.text()).toEqual('3');
     });
   });
 
@@ -78,6 +85,12 @@ describe('ng-really', function () {
       element.triggerHandler('click');
 
       expect(element.text()).toEqual('Delete');
+    });
+
+    it('should go back to compiled expression initial state', function () {
+      element = createDirective(templateWithExpressionAsDefaultLabel);
+
+      expect(element.text()).toEqual('3');
     });
   });
 

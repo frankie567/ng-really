@@ -33,7 +33,7 @@ angular.module('yourApp',[
 Then, just set `ng-really` attributes on the element triggering the action you want a confirmation for (usually, a button):
 
 ```html
-<button type="button" class="btn btn-danger" ng-really ng-really-confirm-label="'Really?'" ng-really-confirmed-action="confirmedAction()" ng-really-timeout="1000">Delete</button>
+<button type="button" class="btn btn-danger" ng-really ng-really-confirm-label="Really?" ng-really-confirmed-action="confirmedAction()" ng-really-timeout="1000">Delete</button>
 ```
 
 ### Available attributes
